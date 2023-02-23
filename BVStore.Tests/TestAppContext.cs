@@ -9,7 +9,7 @@ namespace BVStore.Tests
     {
         public TestStoreAppContext()
         {
-            this.Products = new TestProductDbSet();
+           // this.Products = new TestProductDbSet();
         }
 
         public DbSet<Product> Products { get; set; }
