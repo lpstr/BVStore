@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BVStore.Infrastructure.Migrations
 {
     [DbContext(typeof(BVStoreDbContext))]
-    [Migration("20230223132833_order property update")]
-    partial class orderpropertyupdate
+    [Migration("20230223182401_Initial")]
+    partial class Initial
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

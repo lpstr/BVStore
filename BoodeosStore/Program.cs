@@ -1,4 +1,5 @@
-using BoodeosStore.Services;
+using BVStore.API;
+using BVStore.API.Services;
 using BVStore.Domain.Contracts;
 using BVStore.Infrastructure;
 using Microsoft.EntityFrameworkCore;
@@ -28,6 +29,8 @@ builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
 var app = builder.Build();
 
+app.MigrateDatabase();
+app.SeedDatabase();
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {

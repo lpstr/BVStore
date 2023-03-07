@@ -5,7 +5,7 @@ using BVStore.Domain.Enums;
 using BVStore.Domain.Models;
 using BVStore.Infrastructure;
 
-namespace BoodeosStore.Services
+namespace BVStore.API.Services
 {
     //Class to hold methods for order interactions 
     public class OrderService
@@ -158,12 +158,12 @@ namespace BoodeosStore.Services
             }
         }
 
-        public OrderDTO GetOrders(int customerId)
+        public List<OrderDTO> GetOrders(int customerId)
         {
-            OrderDTO result = new OrderDTO();
+            List<OrderDTO> result = new List<OrderDTO>();
             var orders = _unitOfWork.OrderRepository.Get(p=>p.Customer.Id.Equals(customerId));
 
-            result = _mapper.Map<OrderDTO>(orders);
+            result = _mapper.Map<List<OrderDTO>>(orders);
 
             return result;
         }

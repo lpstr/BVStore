@@ -1,9 +1,9 @@
-﻿using BoodeosStore.Services;
+﻿using BVStore.API.Services;
 using BVStore.Domain.Models;
 using BVStore.Infrastructure;
 using Microsoft.AspNetCore.Mvc;
 
-namespace BoodeosStore.Controllers
+namespace BVStore.API.Controllers
 {
     [ApiController]
     [Route("[controller]")]
@@ -21,13 +21,20 @@ namespace BoodeosStore.Controllers
 
 
         [HttpGet(Name = "GetOrders")]
-        public string Get()
+        public IActionResult Get(int customerId)
         {
-            var test = _service.GetOrders(2);
-            //_service.Test();
-            //var test = _unitOfWork.ProductRepository.Get().ToList();
+            try
+            {
+                var orders = _service.GetOrders(customerId);
 
-            return string.Empty;
+
+                return Ok(orders);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest();
+            }
+
         }
 
         [HttpPost(Name="PurchaseOrder")]

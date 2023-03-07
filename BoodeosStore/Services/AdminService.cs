@@ -1,4 +1,4 @@
-﻿namespace BoodeosStore.Services
+﻿namespace BVStore.API.Services
 {
     /// <summary>
     /// Class to hold functionalities for s

@@ -4,7 +4,7 @@ using BVStore.Domain.Entities;
 using BVStore.Domain.Models;
 using BVStore.Infrastructure;
 
-namespace BoodeosStore.Configuration
+namespace BVStore.API.Configuration
 {
     public class OrderProfile : Profile
     {

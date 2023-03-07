@@ -9,7 +9,7 @@
     }
   },
   "profiles": {
-    "BoodeosStore": {
+    "BVStore.API": {
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,

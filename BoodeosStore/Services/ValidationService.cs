@@ -1,6 +1,6 @@
 ﻿using BVStore.Domain.Models;
 
-namespace BoodeosStore.Services
+namespace BVStore.API.Services
 {
     public static class ValidationService
     {
@@ -9,7 +9,7 @@ namespace BoodeosStore.Services
             bool result = false;
 
             //Must include customer id, at least 1 product , orderID
-            if(order.CustomerId <= 0 || order.OrderId <=0 || order.Products.Count<=0 || order.TotalPrice <= 0)
+            if (order.CustomerId <= 0 || order.OrderId <= 0 || order.Products.Count <= 0 || order.TotalPrice <= 0)
             {
                 return result;
             }
